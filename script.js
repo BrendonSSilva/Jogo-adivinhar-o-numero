@@ -28,7 +28,17 @@ function verificarPalpite() {
 
     palpite.value = ''
     total++
-    finalizar()
+    //finalizar após 10 tentativas
+    if (total === 10 && palpiteUser !== numero) {
+        total = 0
+        d('.ant').style.display = 'none'
+        palpite.type = 'hidden'
+        d('.enviar').style.display = 'none'
+        d('.reiniciar').style.display = 'flex'
+        resp.style.backgroundColor = 'orange'
+        resp.innerHTML = 'Tentativas esgotadas. Reinicie o jogo para a próxima rodada.'
+        dica.innerHTML = `A resposta era <b>${numero}</b>`
+    }
 }
 //palpite certo
 function correta() {
@@ -44,21 +54,6 @@ function errada() {
     resp.style.backgroundColor = '#ff0000'
     resp.innerHTML = 'Resposta errada!'
 }
-
-//function finalizar após 10 tentativas
-function finalizar() {
-    if (total === 10) {
-        total = 0
-        d('.ant').style.display = 'none'
-        palpite.type = 'hidden'
-        d('.enviar').style.display = 'none'
-        d('.reiniciar').style.display = 'flex'
-        resp.style.backgroundColor = 'orange'
-        resp.innerHTML = 'Tentativas esgotadas. Reinicie o jogo para a próxima rodada.'
-        dica.innerHTML = ''
-    }
-}
-
 //reiniciar jogo 
 function reiniciar() {
     total = 0

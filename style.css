@@ -1,0 +1,32 @@
+body{
+    background-image: linear-gradient(to bottom right, #00ffff, rgb(0, 0, 0))
+}
+.pai{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.filho{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #ccc;
+    width: 500px;
+    height: auto;
+    box-shadow: 0px 0px 15px #000;
+}
+.digite{
+    display: inline-flex;
+    flex-direction: row;
+}
+input{
+    margin-right: 10px !important;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+@media(max-width: 576px){
+    .filho{width: 300px;}
+
+}

@@ -35,7 +35,6 @@ function correta() {
     resp.style.backgroundColor = '#00ff00'
     resp.innerHTML = 'Resposta correta!'
     palpite.type = 'hidden'
-    d('.ant').style.display = 'none'
     d('.enviar').style.display = 'none'
     d('.reiniciar').style.display = 'flex'
     dica.innerHTML = ''

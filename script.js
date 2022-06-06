@@ -65,12 +65,8 @@ function reiniciar() {
     resp.innerHTML = ''
     dica.innerHTML = ''
     numero = Math.floor(Math.random() * 100) + 1;
-    //resposta
-    console.log(numero)
 }
 d('.ant').style.display = 'none'
 d('.reiniciar').style.display = 'none'
 d('.reiniciar').addEventListener('click', reiniciar)
 d('.enviar').addEventListener('click', verificarPalpite);
-//resposta
-console.log(numero)
